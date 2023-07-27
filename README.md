@@ -14,3 +14,9 @@ This repository contains the Pytorch implementation code for the paper "Gated Gr
 We used four benchmark datasets; Cora, CiteSeer, PubMed, and Flickr. The [data/](https://github.com/dxlabskku/GGCU/tree/main/data) folder contains the Cora benchmark dataset. You can refer to torch-geometric documentation to use other datasets [here](https://pytorch-geometric.readthedocs.io/en/latest/modules/datasets.html).
 
 ## Results
+
+## Usage
+```
+python train.py
+```
+
