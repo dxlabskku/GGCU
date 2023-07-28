@@ -11,8 +11,7 @@ weight_decay: 5e-4
 epochs: 10000
 patience: 100
 feature: identity
-gpu: ???
-device: cuda:${gpu}
+device: cpu
 
 # data path
 x_path: data/x/${dataset}_${feature}.npy
