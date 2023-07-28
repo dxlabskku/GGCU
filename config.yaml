@@ -1,0 +1,35 @@
+# settings
+dataset: cora
+method: GCN
+n_input: 2708
+n_hidden: 32
+n_output: 7
+n_layers: 2
+alpha: 0.2
+lr: 0.01
+weight_decay: 5e-4
+epochs: 10000
+patience: 100
+feature: identity
+gpu: ???
+device: cuda:${gpu}
+
+# data path
+x_path: data/x/${dataset}_${feature}.npy
+train_edge_index_path: data/edge_index/${dataset}_train_edge_index.npy
+test_edge_index_path: data/edge_index/${dataset}_test_edge_index.npy
+positive_path: data/mask/${dataset}_positive.npy
+negative_path: data/mask/${dataset}_negative.npy
+train_mask_path: data/mask/${dataset}_train_mask.npy
+val_mask_path: data/mask/${dataset}_val_mask.npy
+test_mask_path: data/mask/${dataset}_test_mask.npy
+
+# model cfg
+model_cfg:
+  _target_: model.${method}.Model
+  n_input: ${n_input}
+  n_hidden: ${n_hidden}
+  n_output: ${n_output}
+  n_layers: ${n_layers}
+  alpha: ${alpha}
+  device: ${device}
