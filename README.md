@@ -1,6 +1,20 @@
 # Gated Graph Convolutional Unit
 This repository contains the Pytorch implementation code for the paper "Gated Graph Convolutional Unit"
 
+## Architectures
+
+<img src=https://github.com/dxlabskku/GGCU/assets/117340491/337a4a19-c94e-4a1f-be8a-96aa59225843.jpg width="50%"/>
+
+$\mathbf{h}^{(l-1)}$ and $\mathbf{x}$ pass through graph convolutional operation to form *global state* and *local state*. *Forget gate* and *update gate* determine the ratio between two states. $\mathbf{h}^{(l)}$ is figured out by two states and graph residual connection from $\mathbf{h}^{(l-1)}$.
+
+*Forget gate* $f^{(l)}$ and *update gate* $u^{(l)}$ of $l$-th unit are formulated as follows:
+
+$$f^{(l)} = 1 + \alpha \cdot \tanh(\mathbf{W}_f \cdot (\mathbf{s}^{(l)}_g \odot \mathbf{s}^{(l)}_l)).$$
+
+$$u^{(l)} = 1 + \alpha \cdot \tanh(\mathbf{W}_u \cdot (\mathbf{s}^{(l)}_g \odot \mathbf{s}^{(l)}_l)).$$
+
+$\mathbf{W}_f$ and $\mathbf{W}_u$ are trainable parameters, and $\odot$ is concatentation of two vectors.
+
 ## Dependencies
 - CUDA 11.0
 - python 3.10.9
