@@ -1,12 +1,12 @@
 # settings
 dataset: cora
-method: GCN
+method: GGCU
 n_input: 2708
 n_hidden: 32
 n_output: 7
-n_layers: 2
-alpha: 0.2
-lr: 0.01
+n_layers: 10
+alpha: 0.4
+lr: 0.001
 weight_decay: 5e-4
 epochs: 10000
 patience: 100
