@@ -165,7 +165,12 @@ Testing accuracy of Link Prediction without node features are summarized below.
 </table>
 
 ## Usage
+You can run node classification or link prediction with the following commands.
+
 ```
-python train.py
+python train_node_classification.py device=cpu
+python train_link_prediction.py device=cpu
 ```
 
+If you want to run with GPUs, you can replace "device=cpu" with
+You can also run in GPUs, 
