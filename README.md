@@ -179,4 +179,101 @@ python train_node_classification.py device=cuda
 python train_link_prediction.py device=cuda
 ```
 
+You can also run with GGCU $_{trends}$ in link prediction with the following commands.
+
+```
+python train_link_prediction.py method=trends
+```
+
 ## Hyperparameters
+Hyperparameters are tuned with grid search.
+
+Hyperparameters used in node classification with the one-hot representation of the Cora dataset, set as default values, are as follows:
+
+<table>
+  <tr>
+    <td><b>Name</b></td>
+    <td><b>Type</b></td>
+    <td><b>Value</b></td>
+  </tr>
+  <tr>
+    <td>alpha</td>
+    <td>float</td>
+    <td>0.4</td>
+  </tr>
+  <tr>
+    <td>n_layer</td>
+    <td>int</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>lr</td>
+    <td>float</td>
+    <td>1e-3</td>
+  </tr>
+  <tr>
+    <td>weight_decay</td>
+    <td>float</td>
+    <td>5e-4</td>
+  </tr>
+</table>
+
+Hyperparameters used in link prediction with the one-hot representation of the Cora dataset are as follows:
+
+<table>
+  <tr>
+    <td><b>Name</b></td>
+    <td><b>Type</b></td>
+    <td><b>Value</b></td>
+  </tr>
+  <tr>
+    <td>alpha</td>
+    <td>float</td>
+    <td>0.1</td>
+  </tr>
+  <tr>
+    <td>n_layer</td>
+    <td>int</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>lr</td>
+    <td>float</td>
+    <td>1e-3</td>
+  </tr>
+  <tr>
+    <td>weight_decay</td>
+    <td>float</td>
+    <td>5e-4</td>
+  </tr>
+</table>
+
+Hyperparameters of GGCU $_{trends}$ used in link prediction with the one-hot representation of the Cora dataset are as follows:
+
+<table>
+  <tr>
+    <td><b>Name</b></td>
+    <td><b>Type</b></td>
+    <td><b>Value</b></td>
+  </tr>
+  <tr>
+    <td>alpha</td>
+    <td>float</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>n_layer</td>
+    <td>int</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>lr</td>
+    <td>float</td>
+    <td>1e-2</td>
+  </tr>
+  <tr>
+    <td>weight_decay</td>
+    <td>float</td>
+    <td>5e-4</td>
+  </tr>
+</table>
