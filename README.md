@@ -150,7 +150,7 @@ Testing accuracy of Link Prediction without node features are summarized below.
     <td>77.78</td>
   </tr>
   <tr>
-    <td rowspan="2">GGCU$_{trends}$</td>
+    <td rowspan="2">GGCU$$_{trends}$$</td>
     <td>One-hot</td>
     <td>70.68</td>
     <td>68.64</td>
