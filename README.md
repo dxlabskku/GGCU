@@ -1,5 +1,5 @@
-# Gated Graph Convolutional Unit
-This repository contains the Pytorch implementation code for the paper "Gated Graph Convolutional Unit"
+# GGCU: Reviving Gate Mechanism in GNNs with Non-Attributed Graphs
+This repository contains the Pytorch implementation code for the paper "GGCU: Reviving Gate Mechanism in GNNs with Non-Attributed Graphs"
 
 ## Architectures
 
