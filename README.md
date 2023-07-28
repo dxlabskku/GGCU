@@ -165,7 +165,7 @@ Testing accuracy of Link Prediction without node features are summarized below.
 </table>
 
 ## Usage
-You can run node classification or link prediction with the following commands.
+You can run node classification or link prediction with the one-hot representation through the following commands.
 
 ```
 python train_node_classification.py
@@ -179,14 +179,21 @@ python train_node_classification.py device=cuda
 python train_link_prediction.py device=cuda
 ```
 
-You can also run with GGCU $_{trends}$ in link prediction with the following commands.
+You can replace the one-hot representation with the Deepwalk representation through the following commands.
+
+```
+python train_node_classification.py feature=deepwalk
+python train_link_prediction.py feature=deepwalk
+```
+
+You can also run with GGCU $_{trends}$ in link prediction through the following commands.
 
 ```
 python train_link_prediction.py method=trends
 ```
 
 ## Hyperparameters
-Hyperparameters are tuned with grid search.
+The following hyperparameters are tuned with grid search.
 
 Hyperparameters used in node classification with the one-hot representation of the Cora dataset, set as default values, are as follows:
 
@@ -277,3 +284,11 @@ Hyperparameters of GGCU $_{trends}$ used in link prediction with the one-hot rep
     <td>5e-4</td>
   </tr>
 </table>
+
+You can change hyperparameters through the additional command "{name}={value}".
+
+For example:
+
+```
+python train_node_classification.py alpha=0.2
+```
